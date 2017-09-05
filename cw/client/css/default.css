@@ -1,0 +1,72 @@
+/* PRIMARY BLACK = #1a1a1a */
+/* PRIMARY WHITE = */
+* { box-sizing: border-box;
+	padding:0; margin:0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CLEARFIX CODE FORM: http://stackoverflow.com/a/12540590 */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+/* END */
+
+p { color: #1a1a1a; }
+
+html { -webkit-text-size-adjust: none; overflow: scroll;}
+
+a{ color: hsl(36, 100%, 40%) ;}
+
+.disabled{
+	pointer-events: none;
+    cursor: default;
+}
+
+div.main-container{
+	width:75%;
+	max-width: 990px;
+	/*width = 85% on products page*/
+}
+
+div.home-main-ad{
+	padding: 0;
+}
+
+.breadcrumb{
+	margin-bottom: 0;
+}
+
+ul.pagination li a {
+	width: 50px;
+}
+
+/* responsive */
+@media only screen and (max-width: 500px) {
+	div.main-container{
+		width: 100% !important;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+/* desktop */
+@media only screen and (min-width:801px) {
+
+}

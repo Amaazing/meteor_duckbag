@@ -1,0 +1,14 @@
+// this will NOT work independently
+// implementation is under startup/server/
+
+Meteor.startup(function() {
+
+	if (Products.find().count()==0){
+		console.log("DATA INSERTED");
+		var data = JSON.parse(Assets.getText('test_data_with_more_data.json'));
+
+			_.forEach(data, (val) => {
+	            Products.insert(val);
+	        });
+	}
+});

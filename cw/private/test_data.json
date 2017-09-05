@@ -1,0 +1,32 @@
+[  
+   {  
+      "name":"wandering jeans",
+      "price":86,
+      "img_path":"/res/img/products/1.jpg",
+      "category":"/men/jeans"
+   },
+   {  
+      "name":"potato full sleeve shirt",
+      "price":62,
+      "img_path":"/res/img/products/105.jpg",
+      "category":"/men/shirt/full sleeve"
+   },
+   {  
+      "name":"cabbage T-shirt",
+      "price":85,
+      "img_path":"/res/img/products/106.jpg",
+      "category":"/men/shirt/t-shirt"
+   },
+	{  
+      "name":"vile jeans",
+      "price":15,
+      "img_path":"/res/img/products/107.jpg",
+      "category":"/women/jeans"
+   },
+	{  
+      "name":"black heels",
+      "price":15,
+      "img_path":"/res/img/products/109.jpg",
+      "category":"/women/shoes/heels"
+   }
+]

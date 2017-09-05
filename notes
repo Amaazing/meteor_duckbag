@@ -1,0 +1,37 @@
+notes
+
+products.html
+			// add clause to disable mobile pagination buttons for firstPage and lastPage
+	- maybe add two pagination number scrolll things, top and bottom
+
+responsive
+			// sort out layout for products.html; categories
+			// navigation bar
+			// basket columns need an xs-col attribute so it shrinks on smaller screens
+			// z-index for search bar
+			// :: problem was the col-xs not z-index
+
+			// - productItems page
+			//cart page
+
+general
+			//- add footer
+	x social media buttons at the bototm
+
+	x maybe add more fields in the "All Products" dropdown
+	x	+ this would also be useful in the mobile view as then you wouldn't need the "Categories" section
+	x	  since you would be able to view the categories in the dropdown
+
+	- fix header logo thing
+			// fancify the homepage
+
+features
+	x maybe add delivery + returns information page
+			//accounts
+			//favourites section
+
+publications
+	x markup which publications i'm using coz it's a freaking mess right now :D
+
+!duck
+	x waves

@@ -1,0 +1,26 @@
+<template name="favourites">
+
+{{#if favouritesExist}}
+
+	<ul class="product-items-container">
+	{{#each products}}
+		<li class="product-item hvr-sweep-to-bottom" id="{{_id}}">
+			<!-- HEART: https://codepen.io/marcinlukasik/pen/iKbdB -->
+			<svg viewBox="0 0 32 32" class="heart {{#if isFavourite}}heart-selected{{else}}heart-normal{{/if}}">
+				<path class="heart-path" d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454C30,20.335,16,28.261,16,28.261z"/>           
+			</svg>
+			<!-- HEART  -->
+			<img pid={{_id}} src={{img_path}} />
+			<div pid={{_id}} class="product-item-name text-capitalize">{{name}}</div>
+			<div pid={{_id}} class="product-item-price">&#163;{{price}}</div>
+		</li>
+	{{/each}}
+	</ul>
+
+{{else}}
+
+	<p> You have terrible taste <br><span style="font-size:32px;">&#128530;</span></p>
+
+{{/if}}
+
+</template>

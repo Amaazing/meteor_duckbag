@@ -1,0 +1,11 @@
+.profile .details li {
+	list-style: none;
+}
+
+.profile li {
+	margin-bottom:10px;
+}
+
+.profile-image{
+	max-width: 290px;
+}

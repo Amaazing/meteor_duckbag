@@ -1,0 +1,33 @@
+.checkout .panel-info{
+	border-color: #f1e2bc;
+}
+
+.checkout .panel-info > .panel-heading{
+    color: hsla(36, 85%, 49%, 1);
+    background-color: #f7f7d9;
+    border-color: #f1e9bc;
+}
+
+.checkout .btn-primary{
+    color: #fff;
+    background-color: hsl(49, 100%, 73%);
+    border-color: hsla(31, 63%, 69%, 1);
+}
+
+/* responsive */
+@media only screen and (max-width: 500px) {
+
+	.checkout a {
+		white-space: normal;
+	}
+
+}
+
+/* desktop */
+@media only screen and (min-width:801px) {
+
+	.checkout .qty{
+	    margin-top: 20px;
+	}
+
+}

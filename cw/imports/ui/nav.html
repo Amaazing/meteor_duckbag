@@ -1,0 +1,74 @@
+<template name="nav">
+
+	<nav class="container navbar narbar-static-top navbar-custom">
+		<ul class="nav navbar-nav col-md-12">
+
+			<li class="dropdown col-md-2 col-xs-12">
+				<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown">
+					All Products <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					{{#each links}}
+						<li><a href={{path}}>{{name}}</a></li>
+					{{/each}}
+				</ul>
+			</li>
+
+			<div class="search col-md-8 col-xs-12">
+				<form class="navbar-form" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" name="query" placeholder="Quack">
+						<button type="submit" class="btn btn-custom"></button>
+					</div>
+				</form>
+			</div>
+
+			{{> basketTemplate}}
+
+		</ul>
+	</nav>
+
+</template>
+
+<template name="basketTemplate">
+	<div class="basket col-md-2 col-xs-12">
+		<li class="dropdown">
+
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+			<span class="glyphicon glyphicon-shopping-cart"></span> {{baksetItemCountText}} <span class="caret"></span>
+			</a>
+
+			<ul class="dropdown-menu dropdown-cart" role="menu">
+
+			{{#each basketItems}}
+				{{> basketItemTemaplte}}
+			{{/each}}
+
+				<li class="divider"></li>
+				<li><a class="text-center" href="/checkout">View Cart</a></li>
+			</ul>
+
+		</li>
+	</div>
+</template>
+
+<template name="basketItemTemaplte">
+	<div class="row item">
+		<img src="{{basketGetProductImage}}" width=70 height=100/>
+		<div class="item-info">
+			<h3 class="text-capitalize">{{basketGetProductName}}</h3>
+			<ul class="facets">
+				{{#if colour}}<li> Colour: {{colour}} </li>{{/if}}
+				{{#if size}}<li> Size: {{size}} </li>{{/if}}
+				<li> Qty: {{quantity}} </li>
+				<a href="#" class="remove" title="remove item from basket">Remove</a>
+			</ul>
+			<ul class="cart-item-price">
+				<li class="price">
+					Price: &#163;{{basketGetProductPrice}}
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</template>

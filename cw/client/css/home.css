@@ -1,0 +1,17 @@
+.home-container{
+	text-align: center;
+}
+
+.second-ad img {
+	display: inline-block;
+	max-height: 500px;
+	margin: 0 auto 0 auto;
+}
+
+.second-ad img:last-child{
+	margin-left: -30px;
+}
+
+h1, h5{
+	margin: 20px 0 25px 0;
+}

@@ -1,0 +1,6 @@
+html { -webkit-text-size-adjust: none; }
+
+div#home_main_offer{
+	height:300px;
+	border: 1px solid black;	
+}

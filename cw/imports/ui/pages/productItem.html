@@ -1,0 +1,64 @@
+<template name="productItem">
+
+	<div class="row productItem">
+		<ol class="breadcrumb"> <li><a href="/products">Products</a></li> </ol>
+{{#with product}}
+		<div class="productItemImages col-md-6 col-xs-12">
+			<img class="productItem-main-image" id="{{_id}}" src="{{img_path}}" width=350 height=550/>
+		</div>
+
+		<div class="productItemMeta col-md-6 col-xs-12">
+			<div class="productItemMeta-detail-options">
+				<h1 class="headline text-capitalize">{{name}}</h1>
+				<h6 class="category"> {{category}} </h6>
+				<span class="price">&#163;{{price}}</span>
+				<div class="custom-label">colour</div>
+				<div class="colours-buttons input-buttons">
+					<div class="button">
+						<input type="radio" name="cb" id="cyan" unchecked>
+						<label for="cyan" unselectable></label>
+					</div>
+					<div class="button">
+						<input type="radio" name="cb" id="yellow" unchecked>
+						<label for="yellow" unselectable></label>
+					</div>
+					<div class="button">
+						<input type="radio" name="cb" id="magenta" unchecked>
+						<label for="magenta" unselectable></label>
+					</div>
+					<div class="button">
+						<input type="radio" name="cb" id="black" unchecked>
+						<label for="black" unselectable></label>
+					</div>
+				</div>
+				<div class="custom-label" style="letter-spacing:1px">size</div>
+				<div class="size-buttons input-buttons">
+					<div class="button">
+						<input type="radio" name="sb" id="32" unchecked>
+						<label for="32" unselectable>32</label>
+					</div>
+					<div class="button">
+						<input type="radio" name="sb" id="33" unchecked>
+						<label for="33" unselectable>33</label>
+					</div>
+					<div class="button">
+						<input type="radio" name="sb" id="34" unchecked>
+						<label for="34" unselectable>34</label>
+					</div>
+					<div class="button">
+						<input type="radio" name="sb" id="35" unchecked>
+						<label for="35" unselectable>35</label>
+					</div>
+				</div>
+
+				<div class="custom-label">description</div>
+				<div class="description">Lorem ipsum dolor sit amet, vim luptatum adolescens in. Per et quot case rebum, id labitur ponderum tincidunt pro, ut ornatus disputando appellantur est. Mei in homero honestatis, ad labitur pericula democritum mea, vel id case possim vituperatoribus. Te augue errem ubique eos, cu vim impedit copiosae. Munere numquam molestie eam te, augue movet usu an. Clita qualisque cu sea.
+				</div>
+
+				<div class="add-to-cart">Add to cart</div>
+			</div>
+		</div>		
+{{/with}}
+	</div>
+
+</template>

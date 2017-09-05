@@ -1,0 +1,66 @@
+<!-- CREDIT TO AMATELLANES FOR THE TEMPLATE -->
+<!-- http://bootsnipp.com/snippets/featured/shopping-cart-panel-bs-3 -->
+<template name="checkout">
+	<div class="checkout fluid-container">
+		<div class="col-md-12">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="panel-title">
+						<div class="row">
+							<div class="col-xs-6">
+								<h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h5>
+							</div>
+							<div class="col-xs-6">
+								<button type="button" class="btn btn-primary btn-sm btn-block">
+									<a href="/products"> <span class="glyphicon glyphicon-share-alt"></span> Continue shopping </a>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+
+				{{#each items}}
+					{{>checkoutItem}}
+				{{/each}}
+				</div>
+				<div class="panel-footer">
+					<div class="row text-center">
+						<div class="col-md-9 col-xs-6">
+							<h4 class="text-right">Total <strong>&#163;{{total}}</strong></h4>
+						</div>
+						<div class="col-md-3 col-xs-6">
+							<button type="button" class="btn btn-success btn-block" id="checkout">
+								Checkout
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="checkoutItem">
+	<div class="checkoutItem row">
+		<div class="hidden-xs col-md-2">
+			<img class="img-responsive" src="{{checkoutProductImage}}">
+		</div>
+		<div class="col-xs-4">
+			<h4 class="product-name text-capitalize"><a href="/products/item/{{item}}"><strong>{{checkoutProductName}}</strong></a></h4>
+			<h5>{{#if colour}} Colour: {{colour}}{{/if}}</h5>
+			<h5>{{#if size}}Size : {{size}}{{/if}}</h5>
+		</div>
+		<div class="col-xs-6 qty">
+			<div class="col-xs-6 text-right">
+				<h6><strong>&#163;{{checkoutProductPrice}}<span class="text-muted">x</span>{{quantity}}</strong></h6>
+			</div>
+			<div class="col-xs-2">
+				<button type="button" class="btn btn-link btn-xs">
+					<span class="glyphicon glyphicon-trash"> </span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<hr>
+</template>

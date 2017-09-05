@@ -1,0 +1,27 @@
+<template name="userbar">
+
+	<div class="userbar clearfix">
+
+		<ul class="userbar-links">
+			{{#if currentUser}}
+				<li class = ""> <a href="/profile/favourites"> Favourites </a></li>
+				<li class = ""> <a href="/profile/"> Profile Page </a></li>
+				<li id="logout"> <a href="/"> Logout </a></li>
+			{{else}}
+				<li id="login"> <a href=""> Login </a></li>
+				<li id="register"> <a href=""> Register </a></li>
+			{{/if}}
+		</ul>
+
+	</div>
+
+	<div id="modal">
+		<div id="modal-content">
+			<span class="close">&times;</span>
+
+			{{> accountsTemplate state=modalState }}
+
+		</div>
+	</div>
+
+</template>

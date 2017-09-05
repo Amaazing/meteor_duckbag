@@ -1,0 +1,36 @@
+<template name="testLayout">
+
+<!-- <form>
+	<div>
+		<input type="text" name="butt" placeholder="Search..." value="{{booksSearchQuery}}">
+		<button type="submit" >fml</button>
+	</div>
+</form>
+ -->
+<form class="navbar-form" role="search">
+	<div class="form-group">
+		<input type="text" class="form-control" name="butt" placeholder="Quack">
+		<button type="submit" class="btn btn-custom">aaa</button>
+	</div>
+</form>
+
+{{#if searchResults.count}}
+	<ul>
+		{{#each searchResults}}
+			<li>{{name}}</li>
+		{{/each}}
+	</ul>
+{{/if}}
+
+{{#each products}}
+
+<li>
+	<img src={{img_path}} />
+	<div class="">{{name}}</div>
+	<div class="">&#163;{{price}}</div>
+</li>
+
+{{/each}}
+
+
+</template>

@@ -1,0 +1,29 @@
+<!-- <template name="accountsTemplate">
+
+{{#if currentUser}}
+
+<button id="logout"> {{userId}} </button>
+
+{{else}}
+
+<div class="loginView">
+
+		<button data-toggle="collapse" data-target="#loginForm"> Login </button>
+
+			<div class="loginForm collapse" id="loginForm">
+
+				{{> atForm}}
+
+			</div>
+
+</div>
+
+{{/if}}
+
+</template> -->
+
+<template name="accountsTemplate">
+
+	{{> atForm state=state}}
+
+</template>
